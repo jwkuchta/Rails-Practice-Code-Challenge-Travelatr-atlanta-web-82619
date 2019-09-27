@@ -1,0 +1,13 @@
+<h1>All Posts</h1>
+
+<ul>
+<% @posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+<% end %>
+</ul>
+
+<h2><%= link_to "Back to Posts", posts_path %></h2>
+<h2><%= link_to "Back to Destinations", destinations_path %></h2>
+<h2><%= link_to "Back to Bloggers", bloggers_path %></h2>
+
+

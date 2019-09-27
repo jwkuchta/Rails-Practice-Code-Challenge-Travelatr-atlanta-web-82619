@@ -1,0 +1,26 @@
+<h1>Details for <%= @post.title %></h1>
+
+
+<h3>Title: <%= @post.title %></h3>
+<h3><p><%= @post.content %></p></h3>
+<h3>Likes: <%= @post.likes %></h3>
+<h3>Author: <%= link_to @post.blogger.name, blogger_path(@post.blogger) %></h3>
+<h3>Destination: <%= link_to @post.destination.name, destination_path(@post.blogger) %></h3>
+
+<h2><%= link_to "Edit this Post", edit_post_path(@post) %></h2>
+
+<%= form_tag @post, method: "DELETE" do %>
+    <%= submit_tag "Delete This Post" %>
+<% end %>
+
+
+
+<h2><%= link_to "Back to Posts", posts_path %></h2>
+<h2><%= link_to "Back to Destinations", destinations_path %></h2>
+<h2><%= link_to "Back to Bloggers", bloggers_path %></h2>
+
+
+
+
+
+

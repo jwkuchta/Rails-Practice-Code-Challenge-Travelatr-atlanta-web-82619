@@ -1,0 +1,10 @@
+<h1>All Destinations</h1>
+
+<ul>
+<% @destinations.each do |destination| %>
+    <li><%= link_to destination.name, destination %></li>
+<% end %>
+</ul>
+
+<h2><%= link_to "Back to Posts", posts_path %></h2>
+<h2><%= link_to "Back to Bloggers", bloggers_path %></h2>

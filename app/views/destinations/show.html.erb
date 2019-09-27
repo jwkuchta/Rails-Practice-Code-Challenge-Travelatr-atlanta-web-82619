@@ -1,0 +1,20 @@
+<h1>Details for <%= @destination.name %>:</h1>
+
+<%= link_to "Featured Post", post_path(@destination.featured_post) %>
+
+<ul>
+<% @destination.recent_posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+<% end %>
+</ul>
+
+<h2>Average age of bloggers for this destination: </h2>
+<%= @destination.average_age %>
+
+<h2><%= link_to "Back to Posts", posts_path %></h2>
+<h2><%= link_to "Back to Destinations", destinations_path %></h2>
+<h2><%= link_to "Back to Bloggers", bloggers_path %></h2>
+
+
+
+

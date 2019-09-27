@@ -1,0 +1,17 @@
+<h1>Detail page for <%= @blogger.name %>:</h1>
+
+
+<% if @blogger.posts.empty? %>
+  <h3>This blogger doesn't have any posts yet</h3>
+<% else %>
+  <h3>This blogger has a total of <%= @blogger.total_likes %> likes on all their posts </h3>
+  <h3> And here is a link to their <%= link_to "Featured Post", post_path(@blogger.featured_post) %></h3>  
+<% end %>
+
+<h2><%= link_to "Back to Posts", posts_path %></h2>
+<h2><%= link_to "Back to Destinations", destinations_path %></h2>
+<h2><%= link_to "Back to Bloggers", bloggers_path %></h2>
+
+
+
+
